@@ -12,11 +12,22 @@ class MiniGameView extends StatefulWidget {
   State<MiniGameView> createState() => _MiniGameViewState();
 }
 
+Curve changeAnimation(int index){
+  
+  if(index == 1) return Curves.elasticInOut;
+  if(index == 2) return Curves.fastEaseInToSlowEaseOut;
+  if(index ==3) return Curves.slowMiddle;
+  
+  return Curves.bounceOut;  
+}
+
 class _MiniGameViewState extends State<MiniGameView> {
   double ancho = 50;
   double altura = 50;
   Color colorContainer = Colors.teal;
   double borderRadiusValue = 10.0;
+  int index = 0;
+    
 
   void changeShape() {
     final ramdom = Random();
@@ -45,15 +56,26 @@ class _MiniGameViewState extends State<MiniGameView> {
       body: Center(
         child: AnimatedContainer(
           //sirve para animar un contenedor
+
           duration: const Duration(milliseconds: 400),
-          curve: Curves.elasticInOut,
+          curve: changeAnimation(index),
+         
+
+          //elasticInOut
+          //slowMiddle
+          //fastEaseInToSlowEaseOut
           width: ancho <= 0 ? 50 : ancho,
           height: altura <= 0 ? 50 : altura,
           decoration: BoxDecoration(
               //decoracion del contenedor
+
               color: colorContainer,
               borderRadius: BorderRadius.circular(
                   borderRadiusValue <= 0 ? 10 : borderRadiusValue)),
+          child: InkWell(
+            onTap: () => changeShape() ,
+            overlayColor: MaterialStateProperty.all(Colors.white.withOpacity(0.2)), //se usa para cambiar el color del overlay (capa gris)
+          ),
         ),
       ),
 
@@ -68,7 +90,7 @@ class _MiniGameViewState extends State<MiniGameView> {
               onPressed: () => context.go('/home/0'),
               shape: RoundedRectangleBorder( borderRadius: BorderRadius.circular(10)),
               backgroundColor: colorContainer,
-              child: const Icon(Icons.arrow_back_ios_new_rounded),
+              child: const Icon(Icons.arrow_back_ios_new_rounded, color: Colors.white,),
               
             ),
           ),
@@ -82,7 +104,27 @@ class _MiniGameViewState extends State<MiniGameView> {
               onPressed:changeShape,
               shape: RoundedRectangleBorder( borderRadius: BorderRadius.circular(10),),
               backgroundColor: colorContainer,
-              child: const Icon( Icons.play_arrow),
+              child: const Icon( Icons.play_arrow,color: Colors.white),
+            ),
+          ),
+
+          Positioned( 
+            top: 120,
+            width: 150,
+            right: 130,
+            
+            child: FloatingActionButton(
+              heroTag: 'change', //se usa para que no se confundan los botones flotantes y se pueda poner mas de uno  
+              onPressed: (){
+                index++;
+                if(index > 3) index = 0;
+                setState(() {});
+              },
+              shape: RoundedRectangleBorder( borderRadius: BorderRadius.circular(10),),
+              backgroundColor: colorContainer,
+
+              child: Text("Change Animation ${index+1}", style: const TextStyle(color: Colors.white), ),
+
             ),
           ),
           // Add more floating buttons if you want
