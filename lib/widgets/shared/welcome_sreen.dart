@@ -14,10 +14,7 @@ class SlideInfo {
 
 final slides = <SlideInfo>[
   SlideInfo(title: "Bienvenido a nuestra app", 
-  description: """ Estamos emocionados de tenerte aquí 
-  y ser parte de tu viaje hacia la fluidez en este hermoso idioma. Con nuestra aplicación, 
-  tendrás acceso a cuatro emocionantes actividades diseñadas para mejorar tus habilidades 
-  en inglés de manera divertida""", 
+  description: """ Estamos emocionados de tenerte aquí  y ser parte de tu viaje hacia la fluidez en este hermoso idioma. Con nuestra aplicación, tendrás acceso a cuatro emocionantes actividades diseñadas para mejorar tus habilidades en inglés de manera divertida""", 
   imageUrl: "assets/images/welcome_number_two.webp"),
   
   SlideInfo(title: "Informacion sobre las actividades", 
