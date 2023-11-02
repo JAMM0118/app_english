@@ -110,8 +110,8 @@ class _MiniGameViewState extends State<MiniGameView> {
 
           Positioned( 
             top: 120,
-            width: 150,
-            right: 130,
+            width: 157,
+            right: 127,
             
             child: FloatingActionButton(
               heroTag: 'change', //se usa para que no se confundan los botones flotantes y se pueda poner mas de uno  

@@ -1,13 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class LoadingScreen extends StatelessWidget {
   const LoadingScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Image.asset("assets/images/301568770156201.gif",
-      fit: BoxFit.cover,
+    Future.delayed(const Duration(milliseconds: 6350), () {
+      context.go('/welcomeScreen');
+    });
+
+    return const Scaffold(
+      body: Center(
+          child: FadeInImage(
+        placeholder: AssetImage("assets/images/loading_image.gif"),
+        image: AssetImage(
+          "assets/images/loading_image.gif",
+        ),
+      )),
+      backgroundColor: Colors.white,
     );
-    
   }
 }
