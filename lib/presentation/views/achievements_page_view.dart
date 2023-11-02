@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class LogrosScreen extends StatelessWidget {
-  const LogrosScreen({super.key});
+class AchievementsView extends StatelessWidget {
+  const AchievementsView({super.key});
 
   @override
   Widget build(BuildContext context) {
