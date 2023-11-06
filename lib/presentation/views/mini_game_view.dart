@@ -74,6 +74,7 @@ class _MiniGameViewState extends State<MiniGameView> {
                   borderRadiusValue <= 0 ? 10 : borderRadiusValue)),
           child: InkWell(
             onTap: () => changeShape() ,
+            
             overlayColor: MaterialStateProperty.all(Colors.white.withOpacity(0.2)), //se usa para cambiar el color del overlay (capa gris)
           ),
         ),

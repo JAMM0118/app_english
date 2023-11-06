@@ -14,16 +14,16 @@ class SlideInfo {
 
 final slides = <SlideInfo>[
   SlideInfo(title: "Bienvenido a nuestra app", 
-  description: """ Estamos emocionados de tenerte aquí  y ser parte de tu viaje hacia la fluidez en este hermoso idioma. Con nuestra aplicación, tendrás acceso a cuatro emocionantes actividades diseñadas para mejorar tus habilidades en inglés de manera divertida""", 
+  description: """ Pariatur amet non minim cillum sit ipsum. Ex amet id minim et exercitation. Culpa incididunt esse aliqua ut laboris velit sunt esse aliquip cupidatat ullamco enim. Non excepteur ea tempor ad ex velit deserunt cillum nostrud incididunt.""", 
   imageUrl: "assets/images/welcome_number_two.webp"),
   
   SlideInfo(title: "Informacion sobre las actividades", 
-  description: """Cada actividad tiene su propio stand,
-  donde alguien de nuestro equipo te explicara con detalles como realizar las actividades""", 
+  description: """ Pariatur amet non minim cillum sit ipsum. Ex amet id minim et exercitation. Culpa incididunt esse aliqua ut laboris velit sunt esse aliquip cupidatat ullamco enim. Non excepteur ea tempor ad ex velit deserunt cillum nostrud incididunt.""", 
   imageUrl: "assets/images/welcome_number_one.jpg"),
 
-  SlideInfo(title: "Disfruta de la aventura", description: """Desde ahora el idioma predeterminado de la app sera English
-  Exitos en tu aventura ¡Comienza a explorar y aprendamos juntos!""", imageUrl: "assets/images/aprender-ingles.jpg"),
+  SlideInfo(title: "Disfruta de la aventura", description: """
+  Pariatur amet non minim cillum sit ipsum. Ex amet id minim et exercitation. Culpa incididunt esse aliqua ut laboris velit sunt esse aliquip cupidatat ullamco enim. Non excepteur ea tempor ad ex velit deserunt cillum nostrud incididunt.""", 
+imageUrl: "assets/images/aprender-ingles.jpg"),
 ];
 
 
