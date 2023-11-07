@@ -13,7 +13,7 @@ class MyHomePageView extends StatelessWidget {
     return SingleChildScrollView(
       physics: const AlwaysScrollableScrollPhysics(),
       child: SizedBox(
-        height: MediaQuery.sizeOf(context).height - 75,
+        height: MediaQuery.sizeOf(context).height - 80,
         child: Stack(
           children: [
             Positioned(
@@ -26,28 +26,57 @@ class MyHomePageView extends StatelessWidget {
                       width: 200,
                       child: Image.asset("assets/images/game.gif"))),
             ),
-
-            
             
             Positioned(
-              bottom: 70,
-              left: 100,
+              bottom: 10,
+              left: 160,
               child: ShakeX(
                 infinite: true,
                 duration: const Duration(seconds: 10),
-                from:(MediaQuery.sizeOf(context).width * .5 )/2,
+                from:(MediaQuery.sizeOf(context).width)/3,
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(20),
                   child: Container(
                     height: 70,
                     width: 60,
-                    color: colors.primary,
+                    color: const Color.fromARGB(255, 214, 109, 24),
                   ),
                 ),
               ),
             ),
-
-
+            Positioned(
+              bottom: 220,
+              left: 10,
+              child: ShakeY(
+                infinite: true,
+                duration: const Duration(seconds: 10),
+                from: -((MediaQuery.sizeOf(context).width ) / 3),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(20),
+                  child: Container(
+                    height: 70,
+                    width: 60,
+                    color: Colors.blueAccent,
+                  ),
+                ),
+              ),
+            ),
+             Positioned(
+              bottom: 0,
+              left: 0,
+              child: SlideInLeft(
+                child: Dance(
+                  infinite: true,
+                  duration: const Duration(seconds: 2),
+                  child: Container(
+                    height: 70,
+                    width: 60,
+                    color: Colors.redAccent,
+                  ),
+                ),
+              ),
+            ),
+            
             Positioned(
               top: 270,
               left: 10,
@@ -60,20 +89,18 @@ class MyHomePageView extends StatelessWidget {
                   child: Container(
                     height: 70,
                     width: 60,
-                    color: Colors.blueAccent,
+                    color: colors.primary,
                   ),
                 ),
               ),
             ),
-
-
             Positioned(
-              top: 250,
+              top: 220,
               right: 100,
               child: ShakeX(
                 infinite: true,
                 duration: const Duration(seconds: 10),
-                from:(MediaQuery.sizeOf(context).width * .5 )/2,
+                from: (MediaQuery.sizeOf(context).width * .5) / 2,
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(20),
                   child: Container(
@@ -84,8 +111,6 @@ class MyHomePageView extends StatelessWidget {
                 ),
               ),
             ),
-
-
             Positioned(
               bottom: 70,
               right: 10,
@@ -103,11 +128,7 @@ class MyHomePageView extends StatelessWidget {
                 ),
               ),
             ),
-
-
-
-
-
+            
             Positioned(
               top: 70,
               left: 0,
@@ -123,12 +144,10 @@ class MyHomePageView extends StatelessWidget {
                 ),
               ),
             ),
-
-            Positioned(
-              bottom: 330,
+              Positioned(
+              bottom: 290,
               right: 0,
               child: SlideInLeft(
-
                 child: Dance(
                   infinite: true,
                   duration: const Duration(seconds: 2),
@@ -140,10 +159,9 @@ class MyHomePageView extends StatelessWidget {
                 ),
               ),
             ),
-            
-             Positioned(
+            Positioned(
               left: MediaQuery.sizeOf(context).width * .5 - 50,
-              top: 205,
+              top: 245,
               child: ElasticInRight(
                 duration: const Duration(seconds: 3),
                 child: ShakeX(
@@ -156,7 +174,21 @@ class MyHomePageView extends StatelessWidget {
                         child: Image.asset("assets/images/R.gif"))),
               ),
             ),
-           
+            Positioned(
+              right: (MediaQuery.sizeOf(context).width * .5 - 50),
+              bottom: 10,
+              child: ElasticInRight(
+                duration: const Duration(seconds: 3),
+                child: ShakeX(
+                    duration: const Duration(seconds: 30),
+                    infinite: true,
+                    from: -(MediaQuery.sizeOf(context).width * .5 - 50),
+                    child: SizedBox(
+                        height: 90,
+                        width: 100,
+                        child: Image.asset("assets/images/spiderman_dancing.gif"))),
+              ),
+            ),
             Column(
               children: [
                 Padding(
@@ -170,7 +202,7 @@ class MyHomePageView extends StatelessWidget {
                           color: colors.primary,
                         ))),
                 const Padding(
-                  padding: EdgeInsets.only(left: 20, top: 20),
+                  padding: EdgeInsets.only(left: 20, top: 40),
                   child: Text(
                     "Choose your time",
                     style: TextStyle(
@@ -179,15 +211,15 @@ class MyHomePageView extends StatelessWidget {
                         color: Colors.black),
                   ),
                 ),
+                const SizedBox(height: 20,),
                 const _StandsScreen(
-                    image: "assets/images/past_time.jpg", titulo: "Past time"),
+                    image: "assets/images/fondoFuturama.png", titulo: "Past time / Future time"),
+                
+                const SizedBox(height: 20,),
                 const _StandsScreen(
                     image: "assets/images/present_time.webp",
                     titulo: "Present time"),
-                const _StandsScreen(
-                    image: "assets/images/future_time.jpg",
-                    titulo: "Future time"),
-              ],
+                ],
             ),
           ],
         ),
@@ -217,13 +249,17 @@ class _StandsScreen extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                   color: Colors.black),
             ),
+            const SizedBox(
+              height: 10,
+            ),
             ClipRRect(
               borderRadius: BorderRadius.circular(20),
               child: GestureDetector(
                 onTap: () => context.push('/standsScreen', extra: {
-                  'image-background': image,
-                  'titulo': titulo,
-                  'texto-body': "texto"
+                  'image-background': titulo =="Past time / Future time"
+                      ? "assets/images/OIP_.jpg" 
+                      : "assets/images/wallpaper.webp",
+                    'titulo': titulo,
                 }),
                 child: SizedBox(
                   height: 150,

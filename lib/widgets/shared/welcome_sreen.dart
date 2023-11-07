@@ -1,6 +1,7 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 
 class SlideInfo {
@@ -13,17 +14,16 @@ class SlideInfo {
 }
 
 final slides = <SlideInfo>[
-  SlideInfo(title: "Bienvenido a nuestra app", 
-  description: """ Pariatur amet non minim cillum sit ipsum. Ex amet id minim et exercitation. Culpa incididunt esse aliqua ut laboris velit sunt esse aliquip cupidatat ullamco enim. Non excepteur ea tempor ad ex velit deserunt cillum nostrud incididunt.""", 
-  imageUrl: "assets/images/welcome_number_two.webp"),
+  SlideInfo(title: "¡Welcome to a Time-Traveling Adventure like no other!", 
+  description: """ Prepare to be captivated as we guide you through a journey spanning the past, present, and future, all within the walls of our exciting event""", 
+  imageUrl: "assets/images/aprender-ingles.jpg"),
   
-  SlideInfo(title: "Informacion sobre las actividades", 
-  description: """ Pariatur amet non minim cillum sit ipsum. Ex amet id minim et exercitation. Culpa incididunt esse aliqua ut laboris velit sunt esse aliquip cupidatat ullamco enim. Non excepteur ea tempor ad ex velit deserunt cillum nostrud incididunt.""", 
+  SlideInfo(title: "Information about activities", 
+  description: """ Prepare to embark on a thrilling journey through time in our interactive experience. From exploring historical wonders in the Past Tense Exploration to navigating the high-stakes present in 'Keep Talking' and 'Charades in English,'. Don't forget to join the hunt for our elusive squirrel, in the 'Escape Room,' all while discovering the charm of the Picapiedras and Futurama stand, where the past and future converge. Let's dive in and make unforgettable memories across time!""", 
   imageUrl: "assets/images/welcome_number_one.jpg"),
 
-  SlideInfo(title: "Disfruta de la aventura", description: """
-  Pariatur amet non minim cillum sit ipsum. Ex amet id minim et exercitation. Culpa incididunt esse aliqua ut laboris velit sunt esse aliquip cupidatat ullamco enim. Non excepteur ea tempor ad ex velit deserunt cillum nostrud incididunt.""", 
-imageUrl: "assets/images/aprender-ingles.jpg"),
+  SlideInfo(title: "¡IT'S TIME TO PLAY!", description: "¡Enjoy the adventure dude!", 
+imageUrl: "assets/images/time_to_play.gif"),
 ];
 
 
@@ -100,7 +100,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               delay: const Duration(milliseconds: 200),
               child: FilledButton(
                 onPressed: () => context.go("/home/0") ,
-                child: const Text("Empezar"),
+                child: const Text("Start"),
               ),
             ) 
           ):const SizedBox(), //operador ternario para mostrar el boton de empezar o no
@@ -129,7 +129,6 @@ class _Slide extends StatelessWidget {
 
     final titleStyle = Theme.of(context).textTheme.titleLarge; //para darle un estilo al titulo del slide/diapositiva
     final descriptionStyle = Theme.of(context).textTheme.bodySmall; //para darle un estilo a la descripcion del slide/diapositiva
-
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 30),
       child: 
@@ -142,10 +141,30 @@ class _Slide extends StatelessWidget {
               FadeInDown(child: Image(image: AssetImage(imageUrl))),
               const SizedBox(height: 20),
               
-              FadeInUp(child: Text(title, style: titleStyle)),
+              FadeInUp( 
+                child: Text(title, 
+                
+                style: title =="¡IT'S TIME TO PLAY!" ? 
+                GoogleFonts.getFont(
+                            'Press Start 2P',
+                            fontWeight: FontWeight.bold,
+                            fontSize: 15,
+                            
+                            color: Colors.black, 
+                          )
+                  :titleStyle),
+              ),
               const SizedBox(height: 20),
 
-              FadeInUp(child: Text(description, style: descriptionStyle)),
+              FadeInUp(child: Text(description, style: description == "¡Enjoy the adventure dude!"
+              ?GoogleFonts.getFont(
+                          'Press Start 2P',
+                          fontWeight: FontWeight.bold,
+                          fontSize: 12,
+                          color: Colors.black, 
+                        )
+              
+              :descriptionStyle)),
             ],
           )
         ),
