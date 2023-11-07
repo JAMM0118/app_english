@@ -1,16 +1,27 @@
 # app_english
 
-A new Flutter project.
 
-## Getting Started
+# Prod
 
-This project is a starting point for a Flutter application.
+Para cambiar el nombre de la aplicacion:
 
-A few resources to get you started if this is your first Flutter project:
+``` 
+flutter pub run change_app_package_name:main com.jamm.time_to_play
+```
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Para cambiar el icono de la aplicacion :
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```
+flutter pub run flutter_launcher_icons
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/icon/icon.png"
+  
+```
+
+Para cambiar el splash screen:
+
+```
+flutter pub run flutter_native_splash:create
+```
