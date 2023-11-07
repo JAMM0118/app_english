@@ -1,5 +1,4 @@
 import 'package:app_english/presentation/views/mini_game_view.dart';
-import 'package:app_english/presentation/views/achievements_page_view.dart';
 import 'package:app_english/presentation/views/home_page_view.dart';
 import 'package:app_english/widgets/shared/custom_bottom_appbar.dart';
 import 'package:flutter/material.dart';
@@ -16,7 +15,6 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   final viewRoutes = const<Widget>[
     MyHomePageView(),
-    AchievementsView(),
     MiniGameView()  
   ];
 
@@ -24,7 +22,6 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body:IndexedStack(
-
         index: widget.pageIndex,
         children: viewRoutes,
 

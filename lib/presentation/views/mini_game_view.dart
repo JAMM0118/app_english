@@ -72,9 +72,10 @@ class _MiniGameViewState extends State<MiniGameView> {
               color: colorContainer,
               borderRadius: BorderRadius.circular(
                   borderRadiusValue <= 0 ? 10 : borderRadiusValue)),
-          child: InkWell(
+          child: GestureDetector(
             onTap: () => changeShape() ,
-            overlayColor: MaterialStateProperty.all(Colors.white.withOpacity(0.2)), //se usa para cambiar el color del overlay (capa gris)
+            
+            //overlayColor: MaterialStateProperty.all(Colors.white.withOpacity(0.2)), //se usa para cambiar el color del overlay (capa gris)
           ),
         ),
       ),
@@ -84,16 +85,6 @@ class _MiniGameViewState extends State<MiniGameView> {
       floatingActionButton: Stack( //se usa para poner mas de un floating button
         fit: StackFit.expand, //se usa para que el stack ocupe todo el espacio disponible
         children: [
-          Positioned( left: 20, bottom: 10,
-            child: FloatingActionButton(
-              heroTag: 'back', //se usa para que no se confundan los botones flotantes y se pueda poner mas de uno   
-              onPressed: () => context.go('/home/0'),
-              shape: RoundedRectangleBorder( borderRadius: BorderRadius.circular(10)),
-              backgroundColor: colorContainer,
-              child: const Icon(Icons.arrow_back_ios_new_rounded, color: Colors.white,),
-              
-            ),
-          ),
           
           Positioned( 
             bottom: 10, 
