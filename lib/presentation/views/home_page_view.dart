@@ -130,8 +130,8 @@ class MyHomePageView extends StatelessWidget {
             ),
             
             Positioned(
-              top: 70,
-              left: 0,
+              top: 80,
+              left: 20,
               child: SlideInRight(
                 child: Dance(
                   infinite: true,
@@ -217,7 +217,7 @@ class MyHomePageView extends StatelessWidget {
                 
                 const SizedBox(height: 20,),
                 const _StandsScreen(
-                    image: "assets/images/present_time.webp",
+                    image: "assets/images/presente.jpg",
                     titulo: "Present time"),
                 ],
             ),
@@ -256,9 +256,9 @@ class _StandsScreen extends StatelessWidget {
               borderRadius: BorderRadius.circular(20),
               child: GestureDetector(
                 onTap: () => context.push('/standsScreen', extra: {
-                  'image-background': titulo =="Past time / Future time"
-                      ? "assets/images/OIP_.jpg" 
-                      : "assets/images/wallpaper.webp",
+                  'image-background': titulo =="Present time"
+                      ? "assets/images/presentito.png"
+                      :  "assets/images/picapiedrita.png",
                     'titulo': titulo,
                 }),
                 child: SizedBox(
