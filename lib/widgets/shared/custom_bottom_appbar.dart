@@ -22,8 +22,6 @@ class CustomBottonNavigation extends StatelessWidget {
       height: 75,
       child: BottomNavigationBar( //barra de navegacion inferior
       currentIndex: currentIndex,
-      selectedItemColor: Colors.blueAccent,
-       
        
       //recuerda que en los items se debe poner al menos 2 bottomnavigationbaritem
       //con sus repetivos iconos y labels

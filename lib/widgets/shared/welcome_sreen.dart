@@ -20,7 +20,7 @@ final slides = <SlideInfo>[
   
   SlideInfo(title: "Information about activities", 
   description: """ Prepare to embark on a thrilling journey through time in our interactive experience. From exploring historical wonders in the Past Tense Exploration to navigating the high-stakes present in 'Keep Talking' and 'Charades in English,'. Don't forget to join the hunt for our elusive squirrel, in the 'Escape Room,' all while discovering the charm of the Picapiedras and Futurama stand, where the past and future converge. Let's dive in and make unforgettable memories across time!""", 
-  imageUrl: "assets/images/welcome_number_one.jpg"),
+  imageUrl: "assets/images/welcome_number_one.webp"),
 
   SlideInfo(title: "¡IT'S TIME TO PLAY!", description: "¡Enjoy the adventure dude!", 
 imageUrl: "assets/images/time_to_play.gif"),
