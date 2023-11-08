@@ -47,7 +47,7 @@ class BienvenidaScreen extends StatelessWidget {
                   infinite: true,  
                   duration: const Duration(seconds: 3),
                   child: 
-                  const Text("¡Diviertete! ¡Let's do it!", style: 
+                  const Text("¡Diviertete! Let's do it!", style: 
                   TextStyle(color: Colors.black, 
                   fontSize: 18, fontWeight: FontWeight.bold),
                               )),

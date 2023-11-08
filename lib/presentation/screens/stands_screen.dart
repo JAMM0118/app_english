@@ -1,6 +1,6 @@
 import 'package:app_english/presentation/models/stands_model.dart';
-import 'package:app_english/presentation/views/past_future_time_view.dart';
-import 'package:app_english/presentation/views/present_time_view.dart';
+import 'package:app_english/presentation/views/past_future_tense_view.dart';
+import 'package:app_english/presentation/views/present_tense_view.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 

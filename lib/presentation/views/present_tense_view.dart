@@ -27,7 +27,7 @@ class PresentTime extends StatelessWidget {
               top: 230,
               left: 30,
               child: Text(
-                "Activities Stands",
+                "Activity Stands",
                 style: GoogleFonts.getFont(
                   'Chakra Petch',
                   fontSize: 40,
