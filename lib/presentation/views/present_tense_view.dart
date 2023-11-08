@@ -30,7 +30,7 @@ class PresentTime extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
               Text(
-                "Activities Stands",
+                "Activity Stands",
                 style: GoogleFonts.getFont(
                   'Chakra Petch',
                   fontSize: 40,
