@@ -167,7 +167,7 @@ class _MiniGameViewState extends State<MiniGameView> {
                   
                       false, //para que no se pueda cerrar el dialogo dando click fuera de el
                   builder: (context) => AlertDialog(
-                    title: const Text("¡Time to play!"),
+                    title: const Text("Time to play!"),
                     content: const Text(
                         "This app was made by four people: \n\n- Jhon Alejandro Martinez\n- Santiago Reyes\n- Juan Miguel Posso\n- Victor Hernandez"),
                     actions: [
@@ -203,12 +203,12 @@ void winnerDialog(BuildContext context) {
     barrierDismissible:
         false, //para que no se pueda cerrar el dialogo dando click fuera de el
     builder: (context) => AlertDialog(
-      title: const Text("¡LET'S GO!"),
+      title: const Text("LET'S GO!"),
       content: Wrap(
         children: [
           
           const Text(
-              "¡You won the game!, congratulations, now you can get a prize in the main stand, remember to show this message to the stand's owner"),
+              "You won the game!, congratulations, now you can get a prize in the main stand, remember to show this message to the stand's owner"),
              Center(
                child: SizedBox(
                   width: 100,

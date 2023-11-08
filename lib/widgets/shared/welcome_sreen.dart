@@ -14,25 +14,15 @@ class SlideInfo {
 }
 
 final slides = <SlideInfo>[
-<<<<<<< HEAD
-  SlideInfo(title: "Bienvenido a nuestra app", 
-  description: """ Estamos emocionados de tenerte aquí  y ser parte de tu viaje hacia la fluidez en este hermoso idioma. Con nuestra aplicación, tendrás acceso a cuatro emocionantes actividades diseñadas para mejorar tus habilidades en inglés de manera divertida
-  
-  
-  Desliza a la derecha para continuar""", 
-  imageUrl: "assets/images/welcome_number_two.webp",
-  ),
-=======
-  SlideInfo(title: "¡Welcome to a Time-Traveling Adventure like no other!", 
+  SlideInfo(title: "Welcome to a Time-Traveling Adventure like no other!", 
   description: """ Prepare to be captivated as we guide you through a journey spanning the past, present, and future, all within the walls of our exciting event""", 
   imageUrl: "assets/images/aprender-ingles.jpg"),
->>>>>>> 944aea386597ec02ec7026550ec6b5ab62f005c5
   
   SlideInfo(title: "Information about activities", 
   description: """ Prepare to embark on a thrilling journey through time in our interactive experience. From exploring historical wonders in the Past Tense Exploration to navigating the high-stakes present in 'Keep Talking' and 'Charades in English,'. Don't forget to join the hunt for our elusive squirrel, in the 'Escape Room,' all while discovering the charm of the Picapiedras and Futurama stand, where the past and future converge. Let's dive in and make unforgettable memories across time!""", 
   imageUrl: "assets/images/welcome_number_one.webp"),
 
-  SlideInfo(title: "¡IT'S TIME TO PLAY!", description: "¡Enjoy the adventure dude!", 
+  SlideInfo(title: "IT'S TIME TO PLAY!", description: "Enjoy the adventure dude!", 
 imageUrl: "assets/images/time_to_play.gif"),
 ];
 
@@ -154,7 +144,7 @@ class _Slide extends StatelessWidget {
               FadeInUp( 
                 child: Text(title, 
                 
-                style: title =="¡IT'S TIME TO PLAY!" ? 
+                style: title =="IT'S TIME TO PLAY!" ? 
                 GoogleFonts.getFont(
                             'Press Start 2P',
                             fontWeight: FontWeight.bold,
@@ -166,7 +156,7 @@ class _Slide extends StatelessWidget {
               ),
               const SizedBox(height: 20),
 
-              FadeInUp(child: Text(description, style: description == "¡Enjoy the adventure dude!"
+              FadeInUp(child: Text(description, style: description == "Enjoy the adventure dude!"
               ?GoogleFonts.getFont(
                           'Press Start 2P',
                           fontWeight: FontWeight.bold,

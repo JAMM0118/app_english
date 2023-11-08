@@ -204,7 +204,7 @@ class MyHomePageView extends StatelessWidget {
                 const Padding(
                   padding: EdgeInsets.only(left: 20, top: 40),
                   child: Text(
-                    "Choose your time",
+                    "Choose your tense",
                     style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
@@ -213,12 +213,12 @@ class MyHomePageView extends StatelessWidget {
                 ),
                 const SizedBox(height: 20,),
                 const _StandsScreen(
-                    image: "assets/images/fondoFuturama.png", titulo: "Past time / Future time"),
+                    image: "assets/images/fondoFuturama.png", titulo: "Past tense / Future tense"),
                 
                 const SizedBox(height: 20,),
                 const _StandsScreen(
                     image: "assets/images/presente.jpg",
-                    titulo: "Present time"),
+                    titulo: "Present tense"),
                 ],
             ),
           ],
