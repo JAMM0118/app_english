@@ -7,7 +7,7 @@ class LoadingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Future.delayed(const Duration(milliseconds: 6350), () {
-      context.go('/welcomeScreen');
+      context.go('/bienvenidaScreen');
     });
 
     return const Scaffold(
