@@ -7,6 +7,9 @@ class PastFutureTime extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    
+    final ancho = MediaQuery.sizeOf(context).width;
+    final alto = MediaQuery.sizeOf(context).height;
     return PageView(
         physics: const AlwaysScrollableScrollPhysics(),
         scrollDirection: Axis.vertical,
@@ -14,47 +17,46 @@ class PastFutureTime extends StatelessWidget {
           Stack(
             children: [
               SizedBox(
-                width: MediaQuery.of(context).size.width,
-                height: MediaQuery.of(context).size.height,
+                width: ancho,
+                height: alto,
                 child: Image.asset(
                   "assets/images/Futuramiita.png",
                   fit: BoxFit.fill,
                 )
                   
             ),
-            Positioned(
-              top: 200,
-              left: (MediaQuery.of(context).size.width*.5)/3,
-              child: Text(
-                "Main Stand",
-                style: GoogleFonts.getFont(
-                  'Handjet',
-                  fontSize: 70,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
+            Center(
+              child:Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Text(
+                  "Main Stand",
+                  style: GoogleFonts.getFont(
+                    'Handjet',
+                    fontSize: 70,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
+                  textAlign: TextAlign.center,
                 ),
-                textAlign: TextAlign.center,
-              ),),
-             Positioned(
-              top: 430,
-              left: 170,
-              child: ShakeY(
+                Text(
+                  "Scroll down for more information",
+                  style: GoogleFonts.getFont(
+                    'Handjet',
+                    fontSize: 30,
+                    color: Colors.white,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+                ShakeY(
                 duration: const Duration(seconds: 10),
                 infinite: true,
                 child: const Icon(Icons.arrow_downward,color: Colors.white,size: 100,)),
-              ),
-           Positioned(
-              top: 300,
-              left: 20,
-              child: Text(
-                "Scroll down for more information",
-                style: GoogleFonts.getFont(
-                  'Handjet',
-                  fontSize: 30,
-                  color: Colors.white,
-                ),
-                textAlign: TextAlign.center,
-              ),),
+          
+                ],
+              )
+            ),
               
         ]),
           Column(
@@ -64,7 +66,7 @@ class PastFutureTime extends StatelessWidget {
                 "Introduction \nPast / Future Stand",
                 style: GoogleFonts.getFont(
                   'Handjet',
-                  fontSize: 30,
+                  fontSize: 28,
                   fontWeight: FontWeight.bold,
                   color: Colors.white,
                 ),
@@ -74,12 +76,12 @@ class PastFutureTime extends StatelessWidget {
                 height: 20,
               ),
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(4.0),
                 child: Text(
                   "Prepare to embark on an exhilarating journey through time in our interactive experience. Explore the dynamic activities of the present as you twist and turn in 'Twister,' team up to defuse virtual bombs in 'Keep Talking,' and engage in entertaining charades in 'Charades in English.' For those with a flair for mystery, join the hunt for our elusive squirrel in the 'Escape Room.' Meanwhile, don't miss our unique 'Picapiedras and Futurama' stand, your gateway to understanding the broader context of the event, encompassing both the past and the future. Let's dive in and create timeless memories!",
                   style: GoogleFonts.getFont(
                     'Handjet',
-                    fontSize: 25,
+                    fontSize: alto < 660 ? 16 : 23,
                     color: Colors.white,
                   ),
                   textAlign: TextAlign.center,

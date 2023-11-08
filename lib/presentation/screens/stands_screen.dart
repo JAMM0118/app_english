@@ -34,7 +34,7 @@ class StandsScreen extends StatelessWidget {
         Center(
           child: Container(
             
-            child: standType.titulo == "Present time" ? const PresentTime() : const PastFutureTime(),
+            child: standType.titulo == "Present tense" ? const PresentTime() : const PastFutureTime(),
           ),
         ),
 
