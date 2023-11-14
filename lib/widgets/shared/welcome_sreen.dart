@@ -91,6 +91,19 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
             ),
             
           ),
+          
+          endReached ? const SizedBox() :Positioned(
+            left: 180,
+            
+            bottom: 130,
+            child: ShakeX(
+
+              duration: const Duration(milliseconds: 1500),
+              infinite: true,
+
+              child: const Icon(Icons.arrow_forward, size: 40, color: Colors.black87,))
+            
+          ),
 
           endReached ? Positioned( //si se llega al final se muestra el boton de empezar
             bottom: 30,

@@ -11,13 +11,15 @@ class StandsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      
       body: Stack(children: [
         Container(
             decoration: BoxDecoration(
           gradient: const LinearGradient(
             begin: Alignment.bottomCenter,
             end: Alignment.topCenter,
-            stops: [0.5, 1],
+            tileMode: TileMode.clamp,
+            stops: [0.5, 1.0],
             colors: [
               Colors.black,
               Colors.grey,

@@ -1,32 +1,32 @@
 {
-    "name": "app_english",
-    "short_name": "app_english",
+    "name": "Time to play",
+    "short_name": "Time to play",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#0175C2",
-    "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "background_color": "#f7f5e9",
+    "theme_color": "#f7f5e9",
+    "description": "it's time to play.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
         {
-            "src": "icons/Icon-192.png",
+            "src": "icons/iconoSR.png",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "icons/Icon-512.png",
+            "src": "icons/iconoSR.png",
             "sizes": "512x512",
             "type": "image/png"
         },
         {
-            "src": "icons/Icon-maskable-192.png",
+            "src": "icons/iconoSR.png",
             "sizes": "192x192",
             "type": "image/png",
             "purpose": "maskable"
         },
         {
-            "src": "icons/Icon-maskable-512.png",
+            "src": "icons/iconoSR.png",
             "sizes": "512x512",
             "type": "image/png",
             "purpose": "maskable"
