@@ -149,6 +149,7 @@ class MyHomePageView extends StatelessWidget {
                     )),
               ),
               Center(
+                heightFactor: 0.9,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: height_ <= 900
@@ -320,7 +321,7 @@ class _StandsScreen extends StatelessWidget {
                   color: Colors.black),
             ),
             const SizedBox(
-              height: 10,
+              height: 5,
             ),
             ClipRRect(
               borderRadius: BorderRadius.circular(20),
@@ -332,8 +333,9 @@ class _StandsScreen extends StatelessWidget {
                   'titulo': titulo,
                 }),
                 child: SizedBox(
-                  height: 150,
-                  width: 330,
+                  height: 120,
+
+                  width: 300,
                   child: Image.asset(
                     image,
                     fit: BoxFit.cover,

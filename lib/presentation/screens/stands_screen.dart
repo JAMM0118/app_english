@@ -15,22 +15,34 @@ class StandsScreen extends StatelessWidget {
       body: Stack(children: [
         Container(
             decoration: BoxDecoration(
-          gradient: const LinearGradient(
+          /*gradient: const LinearGradient(
             begin: Alignment.bottomCenter,
             end: Alignment.topCenter,
-            tileMode: TileMode.clamp,
             stops: [0.5, 1.0],
             colors: [
               Colors.black,
               Colors.grey,
             ],
-          ),
+          ),*/
           image: DecorationImage(
             image: AssetImage(standType.imageBackground),
             fit: BoxFit.fill,
             opacity: 0.4,
           ),
         ),
+        ),
+
+        Opacity(
+          opacity: 0.6,
+          child: Image.asset(
+             "assets/images/salvatore.jpg",
+        
+         
+            fit: BoxFit.fill,
+            height: MediaQuery.sizeOf(context).height,
+            width: MediaQuery.sizeOf(context).width,
+            alignment: Alignment.center,
+          ),
         ),
 
         Center(
@@ -48,6 +60,7 @@ class StandsScreen extends StatelessWidget {
               color: Colors.white,
               iconSize: 30,
             )),
+          
       ]),
     );
   }
