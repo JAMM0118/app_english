@@ -18,7 +18,6 @@ class StandsScreen extends StatelessWidget {
           gradient: const LinearGradient(
             begin: Alignment.bottomCenter,
             end: Alignment.topCenter,
-            tileMode: TileMode.clamp,
             stops: [0.5, 1.0],
             colors: [
               Colors.black,
