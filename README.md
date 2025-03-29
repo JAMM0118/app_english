@@ -1,33 +1,30 @@
-# app_english
+# Time to Play - Aprende Inglés Jugando
 
+**Time to Play** es una aplicación educativa disponible en versión móvil y web, diseñada para apoyar las actividades del **English Day**. La app proporciona explicaciones sobre los tiempos verbales en inglés (**pasado, presente y futuro**) y un **mini juego** para reforzar el aprendizaje de una manera divertida.
 
-# Prod
+Cada stand del **English Day** estaba dedicado a un tiempo verbal específico, y la aplicación servía como apoyo para explicar la actividad que se realizaría en cada stand, permitiendo a los participantes comprender mejor la dinámica antes de interactuar con ella.
 
-Para cambiar el nombre de la aplicacion:
+## 📌 Características
 
-``` 
-flutter pub run change_app_package_name:main com.jamm.time_to_play
-```
+- 📖 **Explicaciones detalladas** sobre los tiempos verbales en inglés.
+- 🎮 **Mini juego educativo** con recompensas para motivar la participación.
+- 🌍 **Disponible en versión web y móvil**.
 
-Para cambiar el icono de la aplicacion :
+## 🛠️ Tecnologías Utilizadas
 
-```
-flutter pub run flutter_launcher_icons
-flutter_launcher_icons:
-  android: "launcher_icon"
-  ios: true
-  image_path: "assets/icon/icon.png"
-  
-```
+### 📱 Aplicación Móvil y Web
 
-Para cambiar el splash screen:
+- **Dart y Flutter** para el desarrollo de la interfaz de usuario en ambas plataformas.
 
-```
-flutter pub run flutter_native_splash:create
-```
+### 🌐 Despliegue
 
-Android AAB
+- **Firebase Hosting** para el despliegue de la versión web.
 
-```
-flutter build appbundle
-```
+## 🎯 Uso de la Aplicación
+- Explorar las explicaciones sobre los tiempos verbales.
+
+- Revisar la explicación de la actividad de cada stand antes de participar.
+
+- Participar en el mini juego para reforzar el aprendizaje.
+
+- Disfrutar de la experiencia educativa durante el evento.
